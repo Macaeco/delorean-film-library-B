@@ -9,6 +9,8 @@ router.route('/')
 
 router.route('/lists/:id')
     .patch(updateListCtrl)
+    // .get(getUserList)
+
 
 router.route('/:id')
     .patch(updateEmailCtrl)

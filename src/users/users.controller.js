@@ -25,12 +25,11 @@ export const deleteUserInfo = async (req, res) => {
 }
 export const updateListCtrl = async(req,res) => {
     const {id} = req.params
-    const listNew = {
-        idList:req.body.idList,
-    }
-    console.log(listNew)
-    // console.log(req.body)
-    console.log(req.body.idList)
+    const listNew = req.body
+    
+    // console.log(listNew)
+    console.log(req.body)
+    // console.log(req.body.idist)
     
     const updatedList = await patchUserList(id,listNew)
     res.json(updatedList)

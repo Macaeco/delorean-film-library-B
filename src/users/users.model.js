@@ -111,7 +111,7 @@ export const patchUserList = async (id,list) => {
         const db = client.db(DATABASE_NAME); 
         const userCol = db.collection(COLLECTION_NAME);
     
-        const userList = await userCol.updateOne({"_id":ObjectId(id)}, {$set:{"list":[list, list.idList]}}); 
+        const userList = await userCol.updateOne({"_id":ObjectId(id)}, {$set:{"list":list}}); 
         return userList ?? undefined;
     }catch(err){
         console.error('Retrieve users error: ', err);
