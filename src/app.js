@@ -10,7 +10,8 @@ import FLrouter from './follow/follow.router.js'
 
 dotenv.config();
 const app = express();
-const port = 4000;
+// const port = 4000;
+const port= process.env.PORT || 400;
 
 
 app.use(cors());
