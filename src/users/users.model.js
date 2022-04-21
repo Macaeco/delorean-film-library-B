@@ -1,13 +1,7 @@
 import { MongoClient } from 'mongodb';
 import { ObjectId } from 'mongodb';
 
-
-
-
-const URI = `mongodb+srv://maceco:${process.env.BD_PASS}@dfl-cluster.eqcv7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-
-
-
+const URI = 'mongodb+srv://maceco:Mz3rys85ANhCrw9@dfl-cluster.eqcv7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const client = new MongoClient(URI);
 const DATABASE_NAME = 'dfl-macaecobd';
 const COLLECTION_NAME = 'users';
