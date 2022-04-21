@@ -1,6 +1,6 @@
 import * as EmailValidator from 'email-validator';
 import jwt from 'jsonwebtoken';
-import { jwt_secret } from './auth.secrets.js';
+// import { jwt_secret } from './auth.secrets.js';
 
 
 /**
@@ -25,7 +25,7 @@ export const validateAuth = (req, res, next) => {
         const auth = req.header('Authorization'); // me devuelve el valor de la header
         // ¿Que estructura tiene la header? --> Bearer _token_jwt_
         const token = auth.split(' ')[1]; // obtenemos el token
-        const payload = jwt.verify(token, jwt_secret);
+        const payload = jwt.verify(token, process.env.jwt_secret);
         // añadir a la request un atributo
         req.email = payload.email;
         next();

@@ -1,3 +1,4 @@
+import {} from "dotenv/config"
 import express from 'express';
 import cors from 'cors';
 import authRouter from './auth/auth.router.js';
