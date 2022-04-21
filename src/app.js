@@ -10,8 +10,8 @@ import crouter from './curiosity/curiosity.router.js';
 import FLrouter from './follow/follow.router.js'
 
 dotenv.config();
-const app = express();
-const port = 4000;
+// const app = express();
+const port =process.env.PORT || 4000;
 
 
 app.use(cors());
